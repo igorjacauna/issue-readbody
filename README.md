@@ -1,42 +1,23 @@
-# Nuxt 3 Minimal Starter
+Replace APP_ID in `.firebaserc`
+Deploy to Firebae and try
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+```
+POST https://YOURAPP.web.app/api/issue
+Content-Type: application/json
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
+{
+  "test": 1
+}
 ```
 
-## Development Server
+The response will be
 
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
+{
+  "url": "/api/issue",
+  "statusCode": 500,
+  "statusMessage": "",
+  "message": "The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Object",
+  "stack": ""
+}
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
